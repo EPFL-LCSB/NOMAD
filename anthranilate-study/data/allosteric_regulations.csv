@@ -1,0 +1,294 @@
+reaction_id,regulator,regulation
+PGMT,cys_L_c,activation
+ME1,asp_L_c,activation
+PPC,accoa_c,activation
+PPC,fdp_c,activation
+GLUDy,amp_c,activation
+GLUDy,atp_c,activation
+GLUN,amp_c,activation
+GLUN,glu_L_c,activation
+GLUN,ppi_c,activation
+GHMT2r,ser_L_c,activation
+DDPA,phe_L_c,inhibition
+DDPA,phe_L_c,competitive inhibition
+FBA,cit_c,activation
+FBA,pep_c,activation
+FBP,pep_c,activation
+PGK,_3pg_c,activation
+PGK,atp_c,activation
+METS,nh4_c,activation
+ACALD,nad_c,activation
+PTAr,pep_c,activation
+PTAr,pyr_c,activation
+HSDy,atp_c,activation
+ASNS1,gln_L_c,competitive inhibition
+ASNS1,asn_L_c,competitive inhibition
+ASNS2,amp_c,competitive inhibition
+ASNS2,nh4_c,competitive inhibition
+ASNS2,asp_L_c,competitive inhibition
+ASNN,asp_L_c,competitive inhibition
+ASNN,asn_L_c,competitive inhibition
+ASPT,mal_L_c,competitive inhibition
+ASPT,succ_c,competitive inhibition
+ASPT,asp_L_c,competitive inhibition
+ASPT,pser_L_c,competitive inhibition
+PGMT,accoa_c,competitive inhibition
+PGMT,g1p_c,competitive inhibition
+PGMT,coa_c,competitive inhibition
+ICL,_3pg_c,competitive inhibition
+ICL,acon_C_c,competitive inhibition
+ICL,akg_c,competitive inhibition
+ICL,pep_c,competitive inhibition
+ICL,succ_c,competitive inhibition
+ME1,accoa_c,competitive inhibition
+ME1,atp_c,competitive inhibition
+ME1,oaa_c,competitive inhibition
+ME1,succ_c,competitive inhibition
+ME1,coa_c,competitive inhibition
+PPC,cit_c,competitive inhibition
+PPC,fum_c,competitive inhibition
+PPC,mal_L_c,competitive inhibition
+PPC,succ_c,competitive inhibition
+PPC,asp_L_c,competitive inhibition
+PPCK,atp_c,competitive inhibition
+PPCK,dhap_c,competitive inhibition
+PPCK,f6p_c,competitive inhibition
+PPCK,fdp_c,competitive inhibition
+PPCK,g3p_c,competitive inhibition
+PPCK,nadh_c,competitive inhibition
+PPCK,pep_c,competitive inhibition
+PPA,atp_c,competitive inhibition
+GLU5K,adp_c,competitive inhibition
+GLU5K,pro_L_c,competitive inhibition
+G5SD,co2_c,competitive inhibition
+G5SD,nadp_c,competitive inhibition
+G5SD,nadph_c,competitive inhibition
+P5CR,nadh_c,competitive inhibition
+P5CR,nadp_c,competitive inhibition
+P5CR,pro_L_c,competitive inhibition
+ACGS,coa_c,competitive inhibition
+ACGS,arg_L_c,competitive inhibition
+ACGS,acglu_c,competitive inhibition
+ACGS,citr_L_c,competitive inhibition
+ACGK,atp_c,competitive inhibition
+ACGK,arg_L_c,competitive inhibition
+ACOTA,orn_c,competitive inhibition
+ACODA,ac_c,competitive inhibition
+ACODA,pi_c,competitive inhibition
+ACODA,orn_c,competitive inhibition
+ACODA,gthrd_c,competitive inhibition
+OCBT,pi_c,competitive inhibition
+OCBT,asn_L_c,competitive inhibition
+OCBT,ala_L_c,competitive inhibition
+OCBT,ser_L_c,competitive inhibition
+OCBT,gly_c,competitive inhibition
+OCBT,lys_L_c,competitive inhibition
+OCBT,val_L_c,competitive inhibition
+OCBT,leu_L_c,competitive inhibition
+OCBT,ile_L_c,competitive inhibition
+OCBT,orn_c,competitive inhibition
+ARGDC,lys_L_c,competitive inhibition
+ARGDC,agm_c,competitive inhibition
+AGMT,arg_L_c,competitive inhibition
+AGMT,orn_c,competitive inhibition
+ABTA,akg_c,competitive inhibition
+ABTA,succ_c,competitive inhibition
+FUM,cit_c,competitive inhibition
+ICDHyr,glx_c,competitive inhibition
+ICDHyr,oaa_c,competitive inhibition
+SUCOAS,adp_c,competitive inhibition
+SUCOAS,akg_c,competitive inhibition
+SUCOAS,atp_c,competitive inhibition
+SUCOAS,nadh_c,competitive inhibition
+SUCOAS,succ_c,competitive inhibition
+SERAT,atp_c,competitive inhibition
+SERAT,coa_c,competitive inhibition
+SERAT,ala_L_c,competitive inhibition
+SERAT,ser_L_c,competitive inhibition
+SERAT,gly_c,competitive inhibition
+SERAT,cys_L_c,competitive inhibition
+CYSDS,ala_L_c,competitive inhibition
+CYSDS,met_L_c,competitive inhibition
+CYSDS,phe_L_c,competitive inhibition
+CYSDS,trp_L_c,competitive inhibition
+GLNS,amp_c,competitive inhibition
+GLNS,ser_L_c,competitive inhibition
+GLNS,gly_c,competitive inhibition
+GLNS,trp_L_c,competitive inhibition
+GLNS,phom_c,competitive inhibition
+GLUSy,acon_C_c,competitive inhibition
+GLUSy,adp_c,competitive inhibition
+GLUSy,amp_c,competitive inhibition
+GLUSy,atp_c,competitive inhibition
+GLUSy,glu_L_c,competitive inhibition
+GLUSy,mal_L_c,competitive inhibition
+GLUSy,nadp_c,competitive inhibition
+GLUSy,nadph_c,competitive inhibition
+GLUSy,oaa_c,competitive inhibition
+GLUSy,pyr_c,competitive inhibition
+GLUSy,succ_c,competitive inhibition
+GLUSy,asp_L_c,competitive inhibition
+GLUSy,asn_L_c,competitive inhibition
+GLUSy,ala_L_c,competitive inhibition
+GLUSy,ser_L_c,competitive inhibition
+GLUSy,gly_c,competitive inhibition
+GLUSy,cys_L_c,competitive inhibition
+GLUSy,met_L_c,competitive inhibition
+GLUSy,his_L_c,competitive inhibition
+GLUSy,hom_L_c,competitive inhibition
+PGCD,nadh_c,competitive inhibition
+PGCD,ala_L_c,competitive inhibition
+PGCD,ser_L_c,competitive inhibition
+PGCD,gly_c,competitive inhibition
+PGCD,thr_L_c,competitive inhibition
+PGCD,hom_L_c,competitive inhibition
+PSP_L,ser_L_c,competitive inhibition
+GHMT2r,lac_D_c,competitive inhibition
+GLYAT,coa_c,competitive inhibition
+GLYAT,cys_L_c,competitive inhibition
+THRD,adp_c,competitive inhibition
+THRD,atp_c,competitive inhibition
+THRD,nad_c,competitive inhibition
+THRD,pyr_c,competitive inhibition
+SERD_L,ala_L_c,competitive inhibition
+SERD_L,cys_L_c,competitive inhibition
+SERD_L,his_L_c,competitive inhibition
+SERD_L,ala_L_c,competitive inhibition
+SERD_L,cys_L_c,competitive inhibition
+SERD_L,his_L_c,competitive inhibition
+FBP,fdp_c,competitive inhibition
+FBP,g6p_c,competitive inhibition
+FBP,pi_c,competitive inhibition
+PGI,pep_c,competitive inhibition
+PPS,adp_c,competitive inhibition
+PPS,adpglc_c,competitive inhibition
+PPS,akg_c,competitive inhibition
+PPS,amp_c,competitive inhibition
+PPS,atp_c,competitive inhibition
+PPS,mal_L_c,competitive inhibition
+PPS,oaa_c,competitive inhibition
+PPS,pep_c,competitive inhibition
+GLGC,adp_c,competitive inhibition
+GLGC,amp_c,competitive inhibition
+GLGC,fdp_c,competitive inhibition
+GLGC,pep_c,competitive inhibition
+GLGC,ppi_c,competitive inhibition
+GLCS1,_6pgl_c,competitive inhibition
+PRPPS,adp_c,competitive inhibition
+ATPPRT,amp_c,competitive inhibition
+ATPPRT,atp_c,competitive inhibition
+ATPPRT,his_L_c,competitive inhibition
+IGPDH,pi_c,competitive inhibition
+HISTP,his_L_c,competitive inhibition
+HSST,met_L_c,competitive inhibition
+ADK1,amp_c,competitive inhibition
+G6PDH2r,nadh_c,competitive inhibition
+GND,atp_c,competitive inhibition
+GND,nadp_c,competitive inhibition
+GND,coa_c,competitive inhibition
+TALA,pi_c,competitive inhibition
+EDA,_6pgc_c,competitive inhibition
+EDA,g3p_c,competitive inhibition
+GLUPRT,adp_c,competitive inhibition
+GLUPRT,amp_c,competitive inhibition
+PRFGS,glu_L_c,competitive inhibition
+PRAIS,atp_c,competitive inhibition
+PRAIS,pi_c,competitive inhibition
+ADSS,fum_c,competitive inhibition
+ADSS,succ_c,competitive inhibition
+ACALD,amp_c,competitive inhibition
+ASPK,glu_L_c,competitive inhibition
+ASPK,mal_L_c,competitive inhibition
+ASPK,succ_c,competitive inhibition
+ASPK,thr_L_c,competitive inhibition
+ASPK,lys_L_c,competitive inhibition
+ASPK,leu_L_c,competitive inhibition
+ASPK,hom_L_c,competitive inhibition
+ASAD,cys_L_c,competitive inhibition
+SDPTA,akg_c,competitive inhibition
+DAPDC,glu_L_c,competitive inhibition
+DAPDC,cys_L_c,competitive inhibition
+DAPDC,lys_L_c,competitive inhibition
+HSK,ser_L_c,competitive inhibition
+HSK,thr_L_c,competitive inhibition
+HSK,cys_L_c,competitive inhibition
+HSK,lys_L_c,competitive inhibition
+HSK,val_L_c,competitive inhibition
+HSK,met_L_c,competitive inhibition
+HSK,ile_L_c,competitive inhibition
+HSK,pser_L_c,competitive inhibition
+HSK,aspsa_c,competitive inhibition
+HSK,hcys_L_c,competitive inhibition
+HSDy,nadp_c,competitive inhibition
+HSDy,ser_L_c,competitive inhibition
+HSDy,thr_L_c,competitive inhibition
+HSDy,cys_L_c,competitive inhibition
+HSDy,hom_L_c,competitive inhibition
+DHQTi,succ_c,competitive inhibition
+PPNDH,acon_C_c,competitive inhibition
+PPNDH,cit_c,competitive inhibition
+PPNDH,phe_L_c,competitive inhibition
+CHORM,acon_C_c,competitive inhibition
+CHORM,cit_c,competitive inhibition
+CHORM,phe_L_c,competitive inhibition
+CHORM,tyr_L_c,competitive inhibition
+CHORM,chor_c,competitive inhibition
+PPND,amp_c,competitive inhibition
+PPND,cit_c,competitive inhibition
+PPND,nadh_c,competitive inhibition
+PPND,tyr_L_c,competitive inhibition
+PPND,_34hpp_c,competitive inhibition
+PSCVT,pep_c,competitive inhibition
+PSCVT,pyr_c,competitive inhibition
+PSCVT,_3psme_c,competitive inhibition
+ANS,trp_L_c,competitive inhibition
+ANPRT,trp_L_c,competitive inhibition
+KARA1,nadh_c,competitive inhibition
+KARA1,nadp_c,competitive inhibition
+KARA1,coa_c,competitive inhibition
+ILETA,leu_L_c,competitive inhibition
+ILETA,tyr_L_c,competitive inhibition
+ICL,icit_c,inhibition
+ICDHyr,pep_c,inhibition
+GLUN,adp_c,inhibition
+GLUN,atp_c,inhibition
+GLUN,nad_c,inhibition
+GLUN,nadh_c,inhibition
+GLUN,nadp_c,inhibition
+GLUN,nadph_c,inhibition
+GLUN,pi_c,inhibition
+FBA,dhap_c,inhibition
+FBP,adp_c,inhibition
+FBP,amp_c,inhibition
+PGI,_6pgc_c,inhibition
+G6PDH2r,nadph_c,inhibition
+GND,fdp_c,inhibition
+GND,ru5p_D_c,inhibition
+RPI,amp_c,inhibition
+PTAr,adp_c,inhibition
+PTAr,atp_c,inhibition
+PTAr,nadh_c,inhibition
+PTAr,nadph_c,inhibition
+LDH_D,atp_c,inhibition
+ICL,icit_c,competitive inhibition
+ICDHyr,pep_c,competitive inhibition
+GLUN,adp_c,competitive inhibition
+GLUN,atp_c,competitive inhibition
+GLUN,nad_c,competitive inhibition
+GLUN,nadh_c,competitive inhibition
+GLUN,nadp_c,competitive inhibition
+GLUN,nadph_c,competitive inhibition
+GLUN,pi_c,competitive inhibition
+FBA,dhap_c,competitive inhibition
+FBP,adp_c,competitive inhibition
+FBP,amp_c,competitive inhibition
+PGI,_6pgc_c,competitive inhibition
+G6PDH2r,nadph_c,competitive inhibition
+GND,fdp_c,competitive inhibition
+GND,ru5p_D_c,competitive inhibition
+RPI,amp_c,competitive inhibition
+PTAr,adp_c,competitive inhibition
+PTAr,atp_c,competitive inhibition
+PTAr,nadh_c,competitive inhibition
+PTAr,nadph_c,competitive inhibition
+LDH_D,atp_c,competitive inhibition

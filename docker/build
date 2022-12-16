@@ -1,0 +1,2 @@
+#!/bin/sh
+docker build -t nomad_docker .

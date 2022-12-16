@@ -1,0 +1,6 @@
+#!/bin/sh
+docker run 	--rm -it 			\
+		-v $(pwd)/work:/home/NOMAD/work \
+		-v $(pwd)/..:/NOMAD	\
+		-v $(pwd)/../../smolfem:/smolfem	\
+		nomad_docker

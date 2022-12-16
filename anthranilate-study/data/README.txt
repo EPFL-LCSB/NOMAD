@@ -1,0 +1,27 @@
+In this folder you will find the following files that are required for the NOMAD workflow
+** tfa_samples 
+- This is a csv file with around 5000 computationally generated steady state profiles
+- These were generated using pyTFA and contain the following variables
+-- concentrations
+-- fluxes
+-- Standard Gibb's free energy for all reactions
+-- Thermodynamic displacement for all reactions 
+-- Sample IDs 1712, 1715, 1717, 2392, 2482, 3927, 4230, 4241, 4456, 4468 are the steady-state profiles around which the
+10 chosen kinetic models were parametrized
+
+** allosteric_regulations
+- This file contains a list of compiled allosteric regulations that include mixed, simple, and competitive inhibition.
+- For mixed inhibition, the same inhibitor, reaction_id pair appears twice, once with simple and once with competitive inhibition.
+
+** experiments_*
+- these files contain the experimental data
+- this data was obtained using webplotdigitalizer from the images provided in the paper by Hernandez et al. (2009)
+
+** kinetic_params_top_10_models
+- This is an hdf5 file containing all the kinetic parameters corresponding to each of the 10 kinetic models
+- The parameters are the kms, kis (inhibition constants), maximal velocities (Vmaxs) and equilibrium constants.
+
+** general_rxn_subsystem
+- This is a file with the different reactions and the subsystems they belong to.
+- It is used when generating figure 4.
+
