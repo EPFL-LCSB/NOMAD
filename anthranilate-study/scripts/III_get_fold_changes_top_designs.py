@@ -142,6 +142,8 @@ for this_model in kinetic_models:
         nmodel.variables.EU_LMPD_biomass_c_1_420.ub = 1e-3  # Don't allow enzymatic changes to the lumped reaction
         nmodel.variables.ED_LMPD_biomass_c_1_420.ub = 1e-3
 
+        nmodel.variables.LFR_LMPD_biomass_c_1_420.lb = -0.223  # Corresponding to 80% of original biomass
+
         # Numerical configurations
         nmodel.solver.configuration.tolerances.feasibility = 1e-9
         nmodel.solver.configuration.tolerances.optimality = 1e-9

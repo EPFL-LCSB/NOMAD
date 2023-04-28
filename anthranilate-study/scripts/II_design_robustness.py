@@ -143,7 +143,9 @@ for this_model in kinetic_models:
 
         # Ensure that TKT is expressed together
         expr = nmodel.variables.EU_TKT1 - nmodel.variables.EU_TKT2
-        nmodel.add_constraint(kind=ModelConstraint, id_='TKT_ratio', hook=nmodel, expr=expr, lb=0, ub=0)
+        nmodel.add_constraint(kind=ModelConstraint, id_='TKT_ratio_up', hook=nmodel, expr=expr, lb=0, ub=0)
+        expr = nmodel.variables.ED_TKT1 - nmodel.variables.ED_TKT2
+        nmodel.add_constraint(kind=ModelConstraint, id_='TKT_ratio_down', hook=nmodel, expr=expr, lb=0, ub=0)
 
         # Design constraints
         nmodel.max_enzyme_modifications = N_ENZYMES
@@ -153,6 +155,8 @@ for this_model in kinetic_models:
             var.ub = 100
         nmodel.variables.EU_LMPD_biomass_c_1_420.ub = 1e-3  # Don't allow enzymatic changes to the lumped reaction
         nmodel.variables.ED_LMPD_biomass_c_1_420.ub = 1e-3
+
+        nmodel.variables.LFR_LMPD_biomass_c_1_420.lb = -0.223  # Corresponding to 80% of original biomass
 
         # Numerical configurations
         nmodel.solver.configuration.tolerances.feasibility = 1e-9

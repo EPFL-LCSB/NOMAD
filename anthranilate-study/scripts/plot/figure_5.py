@@ -118,6 +118,8 @@ for conc, scaling in concentrations_to_plot.items():
     plt.legend()
     plt.xlabel('Time (h)')
     plt.xlim([0, 65])
+    if conc == 'anth_e':
+        plt.ylim([0, 0.8])
     plt.ylabel(axis_labels[conc])
     plt.savefig(folder_for_output + 'Figure_5_{}.png'.format(conc))
     plt.close()

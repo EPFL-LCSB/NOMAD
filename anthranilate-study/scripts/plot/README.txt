@@ -9,3 +9,4 @@ each time with a different value of the parameter.
 - For figure 7 C - F, you need to run script V_expression_sensitivity_of_top_designs for the different
 choices of enzymes (enzyme 1 (DDPA), enzyme 2 (GLUDy), enzyme 3, and all 3 enzymes together. Once again,
 you need basically run the script 4 times with a different choice of ENZ_TO_PERTURB ranging from 0 to 3.
+

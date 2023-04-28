@@ -1,5 +1,6 @@
 This folder has the python scripts needed to generate the data that is presented in the paper.
 The order in which the scripts are to be executed is given by the prefix attached to each file name.
+Scripts starting with S. are for studies presented in the Supplementary notes.
 The folder 'plot' contains the scripts to plot each figure.
 
 ** I_generate_all_designs.py
@@ -45,4 +46,31 @@ at the mean NRA proposed values.
 - You can change which enzyme to perturb within the script.
 - Each run consisting of 10x10x5 ODE simulations takes around 4 hours. 
 
+** S.VI_phenotype_perturbation_analysis
+- This is a sensitivity analysis test where we want to study how the NRA predicted anthranilate yield and the actual anthranilate production rate in nonlinear simulations
+varies depending on how close / far we are from the reference phenotype.
+- We vary the allowable fold changes in concentration from 2-fold to 20-fold
+- We also vary the allowable fold changes in enzyme activity from 2-fold to 10-fold
+- For each combination of enzyme activity and concentration fold changes, we generate the top design using NRA and simulate it in a bioreactor
+- You can either run this script once or run it in batches on parallel CPUs
+- For a given combination of concentration fold change and enzyme activity change, it takes around 20-30 minutes. Note the lower time, since we only simulate a single design (the top design).
+- The results of this script are used for plotting figure S.9
 
+** S.VII_double_mutant
+- Two enzymes - DDPA and GLUDy - appear in all of our top 5 targets (see II_design_robustness and III_get_fold_changes_top_design)
+- We wanted to know (prompted by a reviewer) what happens if we only target these two and how this double mutant performs compared to the triple mutant
+- The results of the reactor simulations in this script as used to plot figure S.10
+
+** S.VIII_i_aroGtktA_analysis_design_generation
+- Prompted by reviews, we wanted to find out why our in-silico version of the experimentally implemented strain aroG^fbrtktA had such poor titers compared to the experimental implementation
+- We use NRA to propose 4 additional modifications (apart from DDPA, TKT1 and TKT2) to increase anthranilate yield for each model
+- We generated designs within 99% of the maximum predicted increase in anthranilate yield for each model
+- The designs are then used by the next script for pruning
+
+** S.VIII_ii_aroGtktA_analysis_design_collation
+- After running the previous script, this script takes in all the generated designs, collates them and finds the most frequently occurring one.
+
+** S.VIII_iii_aroGtktA_analysis_design_verification
+- In this script, we verify the top design that occurs 6/10 times across the models.
+- We do this in a reactor setting.
+- The output of this script is used to generate figure S.11 in the supplementary material.

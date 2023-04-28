@@ -25,9 +25,8 @@ if not os.path.exists(folder_for_output):
 # lists to store dataframes which will later be aggregated
 dfs_wt_all = []
 dfs_alt_all = []
-dfs_median = []
 time = np.linspace(0, 60, 1000)
-
+1/0
 # Get the mean response values for each design
 list_mean_designs = []
 for ix in range(0,5):
@@ -37,10 +36,13 @@ for ix in range(0,5):
     # Load dataframe of all solutions for the current design
     df = pd.read_csv(filename, index_col = 0)
 
-    # Get the median of the current design
+    # Get the mean of the current design
     df_mean = df.groupby('time').mean()
 
-    # Append the median to the list
+    # Concat all the solutions for the top 5 designs to get the overall median
+    dfs_alt_all.append(df)
+
+    # Append the mean to the list
     list_mean_designs.append(df_mean)
 
 # Get the median wildtype response
