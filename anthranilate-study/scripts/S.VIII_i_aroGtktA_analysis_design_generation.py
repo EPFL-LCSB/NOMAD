@@ -117,7 +117,7 @@ for this_model in kinetic_models:
     tfa_ix = int(list_ix[0])
 
     # Create folder for output
-    output_folder = './../output/data/S.VIII-aroGtktA-analysis/design-generation-1/{}/'.format(this_model)
+    output_folder = './../output/data/S.VIII-aroGtktA-analysis/design-generation/{}/'.format(this_model)
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 

@@ -5,6 +5,7 @@ Folder specifications:
 - The data in these folders is used for conducting the phenotype perturbation study ( Figure 3 )
 - The data for the wild typ from the 3-fold-conc-change is also used to generate Figure 2
 - The data from the 3-fold-conc-change is used to collate all unique designs and generate Figures 4, 5 and 6A as well.
+- The data from the runs for supplementary notes VI, VII, and VIII are also stored here.
 
 ** enzyme-sensitivity
 - This folder contains the raw data when we conduct the enzyme sensitivty study
