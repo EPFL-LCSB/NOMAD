@@ -36,10 +36,14 @@ during the building of the environment.
 6. Run your docker container
 --> run.bat or ./run
 7. Once you are in the container, go to the folder with all the scripts
---> cd ../../../NOMAD/anthranilate-study/scripts
+--> cd ../../../NOMAD/study-1-K_trpD9923/scripts for the first study
+--> cd ../../../NOMAD/study-2-eK_trpD9923/scripts for the second study
 --> RUN!!!   
 8. Run times for each of the scripts is provided in the readme file in the scripts folder. 
 
 ** Data provided with this repo **
-1. The parameters that characterize the 10 chosen kinetic models are provided in ./anthranilate-study/data/kinetic_params_top_10_models.hdf5
-2. The final set of 41 unique designs is in the csv file ./anthranilate-study/data/all_unique_designs.csv
+1. The parameters that characterize the 10 kinetic models for the first study, K_trpD9923, are provided in ./study-1-K_trpD9923/data/kinetic_params_top_10_models.hdf5
+2. The final set of 41 unique designs from K_trpD9923 is in the csv file ./study-1-K_trpD9923/data/all_unique_designs.csv
+3. The parameters for the 13 enhanced kinetic models for the second study, eK_trpD9923, are provided in ./study-2-K_trpD9923/data/enhanced_kinetic_models.hdf5
+4. The final set of 34 unique designs from eK_trpD9923 is in the csv file ./study-2-K_trpD9923/output/data/all_unique_designs_eK_trpD9923.csv
+5. The final set of 13 unique designs from eK_trpD9923_d2 is in the csv file ./study-2-K_trpD9923/output/data/all_unique_designs_eK_trpD9923_d2.csv

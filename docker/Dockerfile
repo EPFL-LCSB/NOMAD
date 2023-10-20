@@ -1,6 +1,10 @@
 FROM python:3.6-stretch
 # Install missing deps
 USER root
+
+# Added because stretch has been moved to archive.debian.org
+RUN echo "deb http://archive.debian.org/debian stretch main"  > /etc/apt/sources.list
+
 # Install unix requirements for the docker
 RUN apt-get update && apt-get install -y --no-install-recommends \
         libxml2-dev     \
@@ -46,23 +50,24 @@ COPY ./utils /utils
 RUN chmod +x /utils/*.sh
 
 # Install sundials
-# RUN /utils/install_chrome.sh
+# RUN /utils/install_chrome.sh  # Removed this on 12/01/2022 due to some broken dependencies for chrome
 
 # Clean up lists
 RUN rm -rf /var/lib/apt/lists/*
 
 # Install sundials
-RUN /utils/install_sundials.sh
+RUN /utils/install_sundials_5_1.sh
 
+# NOTE: Sundials version 5.1.0 + scikits.odes==2.6.3 work together
 # Export environment variables from installation
-ENV SUNDIALS_INCLUDEDIR ="${HOME}/sundials-3.1.1/include"
-ENV SUNDIALS_LIBDIR ="${HOME}/sundials-3.1.1/lib"
-ENV SUNDIALS_INST="${HOME}/sundials-3.1.1"
+ENV SUNDIALS_INCLUDEDIR ="${HOME}/sundials-5.1.0/include"
+ENV SUNDIALS_LIBDIR ="${HOME}/sundials-5.1.0/lib"
+ENV SUNDIALS_INST="${HOME}/sundials-5.1.0"
+
 # Install python interface to sundials
 #modify this
-RUN pip install 'scikits.odes== 2.4.1'
-ENV LD_LIBRARY_PATH="${HOME}/sundials-3.1.1/lib"
-# ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"/sundials-3.1.1/lib" # Used originally but changed to line 64 
+RUN pip install 'scikits.odes== 2.6.3'
+ENV LD_LIBRARY_PATH="${HOME}/sundials-5.1.0/lib"
 ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"/usr/local/lib"
 
 
@@ -94,8 +99,7 @@ ENTRYPOINT ["/bin/bash", "-c", "pip install --user -e /NOMAD/docker/pytfa && \
 pip install --user -e /NOMAD/docker/skimpy &&\
 pip install --user -e /NOMAD/docker/NRAplus &&\
                                 $0 $*"]
-#ENTRYPOINT ["/bin/bash", "-c", "pip install --user -e /skimpy[ORACLE] && \
+#ENTRYPOINT ["/bin/bash", "-c", "pip install --user -e /nomad[ORACLE] && \
 #                                $0 $*"]
 
-								
 CMD /bin/bash
