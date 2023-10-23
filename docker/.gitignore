@@ -1,6 +1,3 @@
-# solver binaries
-solvers/*
-
 # Gurobi key info
 gurobi.lic
 
