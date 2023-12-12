@@ -3,7 +3,7 @@ Plots for enzyme sensitivity analysis for top 5 designs from eK_trpD9923
 - With all 3 enzymes being perturbed
 - With each enzyme individually
 
-Data is generated from V_expression_sensitivty_analysis.py
+Data is generated from V_expression_sensitivty_analysis.py. Report in Supplementary note IX
 """
 
 import pandas as pd
@@ -32,10 +32,7 @@ folder_for_output = './../../output/figures/figure-S.12/'
 if not os.path.exists(folder_for_output):
     os.makedirs(folder_for_output)
 
-# Labels used in Figure 7
-# - C is for all three,
-# - D for DDPA, E for GLUDy, and F is for the third enzyme
-figure_labels = ['D', 'E', 'F', 'C', ]
+figure_labels = ['d', 'e', 'f', 'c', ]
 for enz_to_plot in ENZYME_NUMBERS_TO_PLOT:
     if enz_to_plot < 3:
         folder_with_data = './../../output/enzyme-sensitivity/eK_trpD9923/{}-percent/enzyme-{}/'.format(PERCENT_PERTURBATION, enz_to_plot)
@@ -79,10 +76,12 @@ for enz_to_plot in ENZYME_NUMBERS_TO_PLOT:
 
     markers = ['o', " ", " ", " ", " ",]
     line_styles = [ " ", '--', '-.', ':', '-']
+    source_data = []
     for conc, scaling in concentrations_to_plot.items():
 
         # Plot wildtype for the current species
         plt.plot(median_wt.index, median_wt[conc] * scaling, label='wt', color='orange')
+        df_temp = [median_wt[conc] * scaling]
 
         # Plot the median for each design
         for ix in range(5):
@@ -91,8 +90,13 @@ for enz_to_plot in ENZYME_NUMBERS_TO_PLOT:
             plt.plot(df_to_plot.index, df_to_plot[conc] * scaling,
                      label = 'd-{}'.format(ix+1), color='blue',
                      marker=markers[ix], markevery=50, linestyle=line_styles[ix], linewidth=2)
+            df_temp.append(df_to_plot[conc] * scaling)
             if conc == 'anth_e':
                 print('Enz {}, design {} --> mean anthraniltae = {}'.format(enz_to_plot, ix, df_to_plot.iloc[-1][conc] * scaling))
+
+        df_temp = pd.concat(df_temp, axis=1)
+        df_temp.columns = [conc + i for i in ['_wt', '_d-1', '_d-2', '_d-3', '_d-4', '_d-5']]
+        source_data.append(df_temp)
 
         # plt.legend()
         plt.xlabel('Time (h)')
@@ -100,4 +104,8 @@ for enz_to_plot in ENZYME_NUMBERS_TO_PLOT:
         plt.ylabel(ylabels[conc])
         plt.savefig(folder_for_output + 'Figure_S.12_{}_{}.png'.format(figure_labels[enz_to_plot], conc))
         plt.close()
+
+    source_data = pd.concat(source_data, axis=1)
+    source_data.to_csv(folder_for_output + 'source_data_{}.csv'.format(figure_labels[enz_to_plot]))
+
 

@@ -1,6 +1,6 @@
 """
 We found that DDPA and GLUDy appeared in each of our top 5 designs. Hence, we decided to test the performance of just
-this double mutant as suggested by one of the reviewers. The data is used to generate figure S.10 in supplementary note
+this double mutant as suggested by one of the reviewers. The data is used to generate figure S.9 in supplementary note
 S.VII
 """
 import numpy as np
@@ -172,9 +172,7 @@ concentrations_to_plot = {'glc_D_e': 1 / CONCENTRATION_SCALING,
                           'biomass_strain_1': 0.28e-12 / 0.05}
 
 
-# Plotting - NOTE this is now done separately by the script in the plot folder (figure_S.10)
-import matplotlib.pyplot as plt
-
+# Collating data
 df_sols_design = []
 df_sols_wt = []
 for ix in range(10):
@@ -187,35 +185,6 @@ for ix in range(10):
 
 df_sols_wt = pd.concat(df_sols_wt)
 df_sols_design = pd.concat(df_sols_design)
-#
-# df_wt_mean = df_sols_wt.groupby('time').quantile(0.5)
-# df_wt_upper = df_sols_wt.groupby('time').quantile(0.75)
-# df_wt_lower = df_sols_wt.groupby('time').quantile(0.25)
-#
-# df_designs_mean = df_sols_design.groupby('time').quantile(0.5)
-# df_designs_upper = df_sols_design.groupby('time').quantile(0.75)
-# df_designs_lower = df_sols_design.groupby('time').quantile(0.25)
-
-# for conc, scaling in concentrations_to_plot.items():
-#     time = df_wt_mean.index
-#     # Plot wildtype
-#     plt.plot(time, df_wt_mean[conc] * scaling, color='orange', label='wt')
-#     plt.fill_between(time, df_wt_lower[conc] * scaling, df_wt_upper[conc] * scaling, facecolor='orange',
-#                      interpolate=True,
-#                      alpha=0.1)
-#
-#     # Plot design alternatives
-#     plt.plot(time, df_designs_mean[conc] * scaling, color='blue', label='NOMAD - DDPA + GLUDy')
-#     plt.fill_between(time, df_designs_lower[conc] * scaling, df_designs_upper[conc] * scaling,
-#                      facecolor='blue',
-#                      interpolate=True,
-#                      alpha=0.1)
-#
-#     plt.legend()
-#     plt.xlabel('time (h)')
-#     plt.ylabel(conc.replace('strain_1', '') + ' (g/L)')
-#     plt.savefig(folder_for_figures + '/ddpa_gludy_only_{}.png'.format(conc))
-#     plt.close()
 
 df_sols_wt.to_csv(folder_for_output + '/ode_sols_wt.csv')
 df_sols_design.to_csv(folder_for_output + '/ode_sols_ddpa_gludy.csv')

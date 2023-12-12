@@ -44,6 +44,8 @@ for this_model in kinetic_models:
     dfs_wt.append(df[df['solution_id'] == 0])  # Only wt
 dfs_wt = pd.concat(dfs_wt)
 
+# This is for the source data stuff
+list_data = []
 for conc, scaling in dict_scaling.items():
 
     # Get the exp data for the current concentration to plot
@@ -69,7 +71,9 @@ for conc, scaling in dict_scaling.items():
                      facecolor='orange',
                      interpolate=True,
                      alpha = 0.3)
-
+    df_temp = pd.concat([median_wt[conc] * scaling, lower_wt[conc] * scaling, upper_wt[conc] * scaling], axis=1)
+    df_temp.columns = [conc + '_median', conc + '_lower', conc + '_upper']
+    list_data.append(df_temp)
     plt.legend()
 
     plt.xlabel('Time (h)')
@@ -77,4 +81,8 @@ for conc, scaling in dict_scaling.items():
     plt.xlim([0, 65])
     plt.savefig(folder_for_output + 'figure_2_{}.png'.format(conc))
     plt.close()
+
+# For source data generation
+df_source_data = pd.concat(list_data, axis=1)
+df_source_data.to_csv(folder_for_output + 'source_data.csv')
 

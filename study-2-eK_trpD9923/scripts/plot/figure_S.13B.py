@@ -71,10 +71,12 @@ for enz_to_plot in ENZYME_NUMBERS_TO_PLOT:
 
     markers = ['o', " ", " ", " ", " ",]
     line_styles = [ " ", '--', '-.', ':', '-']
+    source_data = []
     for conc, scaling in concentrations_to_plot.items():
 
         # Plot wildtype for the current species
         plt.plot(median_wt.index, median_wt[conc] * scaling, label='wt', color='orange')
+        df_temp = [median_wt[conc] * scaling]
 
         # Plot the median for each design
         for ix in range(5):
@@ -85,11 +87,20 @@ for enz_to_plot in ENZYME_NUMBERS_TO_PLOT:
                      marker=markers[ix], markevery=50, linestyle=line_styles[ix], linewidth=2)
             if conc == 'anth_e':
                 print('Enz {}, design {} --> mean anthraniltae = {}'.format(enz_to_plot, ix, df_to_plot.iloc[-1][conc] * scaling))
+            df_temp.append(df_to_plot[conc] * scaling)
+
+
+        df_temp = pd.concat(df_temp, axis=1)
+        df_temp.columns = [conc + i for i in ['_wt', '_d-1', '_d-2', '_d-3', '_d-4', '_d_5']]
+        source_data.append(df_temp)
 
         # plt.legend()
         plt.xlabel('Time (h)')
         plt.xlim([0, 60])
         plt.ylabel(ylabels[conc])
-        plt.savefig(folder_for_output + 'figure_S.13_B_{}.png'.format(conc))
+        plt.savefig(folder_for_output + 'figure_S.13_b_{}.png'.format(conc))
         plt.close()
+
+source_data = pd.concat(source_data, axis=1)
+source_data.to_csv(folder_for_output + 'source_data_b.csv')
 

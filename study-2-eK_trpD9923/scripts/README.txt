@@ -1,7 +1,7 @@
 **Files
 1. simulate_top_35_models.py
 - This file contains the code to simulate the 35 models calibrated on the behavior of two strains - W3110 trpD9923 and W3110 trpD9923/pJLaroGfbr
-- The output of this file is used to generate figure 6A
+- The output of this file is used to generate figure 6a
 2. single_species.yaml
 - This is the file with the medium data with which we start the bioreactor simulations
 

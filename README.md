@@ -60,3 +60,4 @@ Run times for each of the scripts is provided in the readme file in the scripts 
 3. The parameters for the 13 enhanced kinetic models for the second study, eK_trpD9923, are provided in ./study-2-K_trpD9923/data/enhanced_kinetic_models.hdf5
 4. The final set of 34 unique designs from eK_trpD9923 is in the csv file ./study-2-K_trpD9923/output/data/all_unique_designs_eK_trpD9923.csv
 5. The final set of 13 unique designs from eK_trpD9923_d2 is in the csv file ./study-2-K_trpD9923/output/data/all_unique_designs_eK_trpD9923_d2.csv
+6. The source data for all the figures in the paper is provided in the root directory in source_data.xlsx

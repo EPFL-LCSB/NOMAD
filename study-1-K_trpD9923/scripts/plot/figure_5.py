@@ -10,6 +10,8 @@ alt_median = 0.42
 ddpa = 0.325
 ddpa tkt = 0.345
 wt = 0.31
+
+code has been updated to also collate source data for the final submission
 """
 
 import pandas as pd
@@ -88,7 +90,7 @@ axis_labels = {'glc_D_e': 'Glucose (g/L)',
                'biomass_strain_1': 'Biomass (g/L)',
                }
 
-
+source_data = [] # added this for final submission to obtain source data
 time = list(dfs_wt_median.index)
 for conc, scaling in concentrations_to_plot.items():
 
@@ -96,12 +98,15 @@ for conc, scaling in concentrations_to_plot.items():
     plt.plot(time, dfs_wt_median[conc] * scaling, color='orange', label = 'wt')
     plt.fill_between(time, dfs_wt_lower[conc] * scaling, dfs_wt_upper[conc] * scaling, facecolor='orange', interpolate=True,
                      alpha = 0.3)
+    df_temp = [dfs_wt_median[conc] * scaling, dfs_wt_lower[conc] * scaling, dfs_wt_upper[conc] * scaling]
+    cols = [conc + '_median_wt', conc + '_lower_wt', conc + '_upper_wt']
 
     # Plot design alternatives
     plt.plot(time, dfs_alt_median[conc] * scaling, color='blue', label = 'NOMAD')
     plt.fill_between(time, dfs_alt_lower[conc] * scaling, dfs_alt_upper[conc] * scaling, facecolor='blue', interpolate=True,
                      alpha=0.1)
-
+    df_temp.extend([dfs_alt_median[conc] * scaling, dfs_alt_lower[conc] * scaling, dfs_alt_upper[conc] * scaling])
+    cols.extend([conc + '_median_designs', conc + '_lower_designs', conc + '_upper_designs'])
     # Plot MCA based approach
     # plt.plot(time, dfs_fcc_median[conc] * scaling, color='red', label='mca')
     # plt.fill_between(time, dfs_fcc_lower[conc] * scaling, dfs_fcc_upper[conc] * scaling, facecolor='red',
@@ -113,12 +118,20 @@ for conc, scaling in concentrations_to_plot.items():
     plt.fill_between(time, dfs_ddpa_lower[conc] * scaling, dfs_ddpa_upper[conc] * scaling, facecolor='black',
                      interpolate=True,
                      alpha=0.1)
+    df_temp.extend([dfs_ddpa_median[conc] * scaling, dfs_ddpa_lower[conc] * scaling, dfs_ddpa_upper[conc] * scaling])
+    cols.extend([conc + '_median_ddpa', conc + '_lower_ddpa', conc + '_upper_ddpa'])
 
     # Plot paper design - DDPA fbr + TKT
     plt.plot(time, dfs_ddpa_tkt_median[conc] * scaling, color='red', label='$aroG^{fbr}tktA$', linestyle='--',)
     plt.fill_between(time, dfs_ddpa_tkt_lower[conc] * scaling, dfs_ddpa_tkt_upper[conc] * scaling, facecolor='red',
                      interpolate=True,
                      alpha=0.1)
+    df_temp.extend([dfs_ddpa_tkt_median[conc] * scaling, dfs_ddpa_tkt_median[conc] * scaling, dfs_ddpa_tkt_median[conc] * scaling])
+    cols.extend([conc + '_median_ddpa_tkt', conc + '_lower_ddpa_tkt', conc + '_upper_ddpa_tkt'])
+
+    df_temp = pd.concat(df_temp, axis=1)
+    df_temp.columns = cols
+    source_data.append(df_temp)
 
     plt.legend()
     plt.xlabel('Time (h)')
@@ -129,3 +142,5 @@ for conc, scaling in concentrations_to_plot.items():
     plt.savefig(folder_for_output + 'figure_5_{}.png'.format(conc))
     plt.close()
 
+source_data = pd.concat(source_data, axis=1)
+source_data.to_csv(folder_for_output + 'source_data.csv')

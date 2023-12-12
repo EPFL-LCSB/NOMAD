@@ -1,5 +1,5 @@
 """
-Script to generate the plot for Figure 7A --> NOMAD designs based on eK_trpD9923
+Script to generate the plot for Figure 7a --> NOMAD designs based on eK_trpD9923
 - Plot responses of the following
 1. All NOMAD generated solutions across all the 13 models
 2. All wildtype solutions usnig these 13 models
@@ -84,6 +84,7 @@ axis_labels = {'glc_D_e': 'Glucose (g/L)',
                'biomass_strain_1': 'Biomass (g/L)',
                }
 
+source_data = [] # added this for final submission to obtain source data
 time = list(dfs_wt_median.index)
 for conc, scaling in concentrations_to_plot.items():
 
@@ -91,11 +92,15 @@ for conc, scaling in concentrations_to_plot.items():
     plt.plot(time, dfs_wt_median[conc] * scaling, color='orange', label = 'wt')
     plt.fill_between(time, dfs_wt_lower[conc] * scaling, dfs_wt_upper[conc] * scaling, facecolor='orange', interpolate=True,
                      alpha = 0.3)
+    df_temp = [dfs_wt_median[conc] * scaling, dfs_wt_lower[conc] * scaling, dfs_wt_upper[conc] * scaling]
+    cols = [conc + '_median_wt', conc + '_lower_wt', conc + '_upper_wt']
 
     # Plot design alternatives
     plt.plot(time, dfs_alt_median[conc] * scaling, color='blue', label = 'NOMAD')
     plt.fill_between(time, dfs_alt_lower[conc] * scaling, dfs_alt_upper[conc] * scaling, facecolor='blue', interpolate=True,
                      alpha=0.1)
+    df_temp.extend([dfs_alt_median[conc] * scaling, dfs_alt_lower[conc] * scaling, dfs_alt_upper[conc] * scaling])
+    cols.extend([conc + '_median_designs', conc + '_lower_designs', conc + '_upper_designs'])
 
 
     # Plot paper design - DDPA fbr
@@ -103,19 +108,31 @@ for conc, scaling in concentrations_to_plot.items():
     plt.fill_between(time, dfs_ddpa_lower[conc] * scaling, dfs_ddpa_upper[conc] * scaling, facecolor='black',
                      interpolate=True,
                      alpha=0.1)
+    df_temp.extend([dfs_ddpa_median[conc] * scaling, dfs_ddpa_lower[conc] * scaling, dfs_ddpa_upper[conc] * scaling])
+    cols.extend([conc + '_median_ddpa', conc + '_lower_ddpa', conc + '_upper_ddpa'])
+
 
     # Plot paper design - DDPA fbr + TKT
     plt.plot(time, dfs_ddpa_tkt_median[conc] * scaling, color='red', label='$aroG^{fbr}tktA$', linestyle='--',)
     plt.fill_between(time, dfs_ddpa_tkt_lower[conc] * scaling, dfs_ddpa_tkt_upper[conc] * scaling, facecolor='red',
                      interpolate=True,
                      alpha=0.1)
+    df_temp.extend([dfs_ddpa_tkt_median[conc] * scaling, dfs_ddpa_tkt_median[conc] * scaling, dfs_ddpa_tkt_median[conc] * scaling])
+    cols.extend([conc + '_median_ddpa_tkt', conc + '_lower_ddpa_tkt', conc + '_upper_ddpa_tkt'])
+
+    df_temp = pd.concat(df_temp, axis=1)
+    df_temp.columns = cols
+    source_data.append(df_temp)
 
     # plt.legend()
     plt.xlabel('Time (h)')
     plt.xlim([0, 65])
     plt.ylabel(axis_labels[conc])
-    plt.savefig(folder_for_output + 'Figure_7A_{}.png'.format(conc))
+    plt.savefig(folder_for_output + 'Figure_7a_{}.png'.format(conc))
     plt.close()
+
+source_data = pd.concat(source_data, axis=1)
+source_data.to_csv(folder_for_output + 'source_data_a.csv')
 
 # Some calculations to report
 factor = 0.9

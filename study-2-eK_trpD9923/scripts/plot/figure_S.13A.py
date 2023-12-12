@@ -80,6 +80,7 @@ ylabels = {'glc_D_e': 'Glucose (g/L)',
 
 markers = ['o', " ", " ", " ", " ", ]
 line_styles = [ " ", '--', '-.', ':', '-']
+source_data = []
 for conc, scaling in concentrations_to_plot.items():
 
     # Plot wildtype for the current species
@@ -90,6 +91,7 @@ for conc, scaling in concentrations_to_plot.items():
 
     # Plot d2 exp
     plt.plot(mean_d2.index, mean_d2[conc] * scaling, label='d2', color='black')
+    df_temp = [mean_wt[conc] * scaling, mean_d1[conc] * scaling, mean_d2[conc] * scaling]
 
     # Plot the mean for each design
     for ix in range(5):
@@ -97,10 +99,18 @@ for conc, scaling in concentrations_to_plot.items():
         plt.plot(df_to_plot.index, df_to_plot[conc] * scaling,
                  label = 'd-{}'.format(ix+1), color='blue',
                  marker=markers[ix], markevery=50, linestyle=line_styles[ix], linewidth=2)
+        df_temp.append(df_to_plot[conc] * scaling)
+
+    df_temp = pd.concat(df_temp, axis=1)
+    df_temp.columns = [conc + i for i in ['_wt', '_ddpa', '_ddpa_tkt', '_d-1', '_d-2', '_d-3', '_d-4', '_d_5']]
+    source_data.append(df_temp)
 
     # plt.legend()
     plt.xlabel('Time (h)')
     plt.ylabel(ylabels[conc])
-    plt.savefig(folder_for_output + 'figure_S.13_A_{}.png'.format(conc))
+    plt.savefig(folder_for_output + 'figure_S.13_a_{}.png'.format(conc))
     plt.close()
+
+source_data = pd.concat(source_data, axis=1)
+source_data.to_csv(folder_for_output + 'source_data_a.csv')
 

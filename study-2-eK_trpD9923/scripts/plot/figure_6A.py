@@ -1,5 +1,5 @@
 '''
-Script to plot Figure 6B:
+Script to plot Figure 6a:
 - the responses of the 35 models calibrated on the behavior of trpD9923 and trpD9923/pJLaroGfbr
 '''
 
@@ -62,8 +62,9 @@ upper_d2 = dfs_d2.groupby('time').quantile(0.75)
 lower_d2 = dfs_d2.groupby('time').quantile(0.25)
 
 # ******************************************************************************************
+source_data = []
 for conc, scaling in dict_scaling.items():
-    
+
     # Plot the experimental data first for each strain
     for i, data_ in enumerate(exp_data[conc]):
         mean = data_[data_.columns[1]]
@@ -84,6 +85,8 @@ for conc, scaling in dict_scaling.items():
                      facecolor='orange',
                      interpolate=True,
                      alpha = 0.2)
+    df_temp = [median_wt[conc] * scaling, lower_wt[conc] * scaling, upper_wt[conc] * scaling]
+    cols = [conc + '_median_wt', conc + '_lower_wt', conc + '_upper_wt']
 
     # Plot trpD9923^sim-enh/pJLaroG^fbr 
     plt.plot(median_d1.index, median_d1[conc] * scaling, color='black', label = 'sim')
@@ -91,6 +94,8 @@ for conc, scaling in dict_scaling.items():
                      facecolor='black',
                      interpolate=True,
                      alpha = 0.1)
+    df_temp.extend([median_d1[conc] * scaling, lower_d1[conc] * scaling, upper_d1[conc] * scaling])
+    cols.extend([conc + '_median_d1', conc + '_lower_d1', conc + '_upper_d1'])
     
     # Plot trpD9923^sim-enh/pJLaroG^fbrtktA
     plt.plot(median_d2.index, median_d2[conc] * scaling, color='red', label = 'sim')
@@ -98,11 +103,19 @@ for conc, scaling in dict_scaling.items():
                      facecolor='red',
                      interpolate=True,
                      alpha = 0.1)
-    
+    df_temp.extend([median_d2[conc] * scaling, lower_d2[conc] * scaling, upper_d2[conc] * scaling])
+    cols.extend([conc + '_median_d2', conc + '_lower_d2', conc + '_upper_d2'])
+
+    df_temp = pd.concat(df_temp, axis=1)
+    df_temp.columns = cols
+    source_data.append(df_temp)
+
     # plt.legend()
     plt.xlabel('Time (h)')
     plt.xlim([0, 65])
     plt.ylabel(labels[conc])
-    plt.savefig(folder_for_output + '/figure_6A_{}.png'.format(conc))
+    plt.savefig(folder_for_output + '/figure_6a_{}.png'.format(conc))
     plt.close()
 
+source_data = pd.concat(source_data, axis=1)
+source_data.to_csv(folder_for_output + '/source_data.csv')

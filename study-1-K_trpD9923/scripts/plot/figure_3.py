@@ -70,6 +70,7 @@ ylabels = {'glc_D_e': 'Glucose (g/L)',
 markers = ['None', 'None', 'None', 'None', 'o']
 linestyles = ['-', '--', '-.', ':', 'None']
 
+source_data = [] # Extra to collect for source data
 for conc, scaling in concentrations_to_plot.items():
 
     # Plot wildtype for the current species concentration
@@ -77,6 +78,7 @@ for conc, scaling in concentrations_to_plot.items():
              label='wt',
              color='orange', linewidth=2)
 
+    df_temp = []
     # Plot the mean for each concentration constraint
     for ix, conc_change in enumerate(MAX_FOLD_CONC_CHANGES):
         df_to_plot = list_mean_nra_designs[ix]
@@ -84,11 +86,19 @@ for conc, scaling in concentrations_to_plot.items():
                  label='{} fold change'.format(conc_change),
                  color='blue', linestyle=linestyles[ix], linewidth=2,
                  marker=markers[ix], markevery=50 + ix,  markersize=6, )
+        df_temp.append(df_to_plot[conc] * scaling)
 
     # Plot mca for the current species concentration
     plt.plot(mean_mca.index, mean_mca[conc] * scaling,
              label='MCA',
              color='red', linewidth=2)
+    df_temp.append(mean_mca[conc] * scaling)
+
+    df_temp = pd.concat(df_temp, axis=1)
+    list_temp = ['_{}_fold_change'.format(i) for i in MAX_FOLD_CONC_CHANGES]
+    list_temp.append('_MCA')
+    df_temp.columns = [conc + i for i in list_temp]
+    source_data.append(df_temp)
 
     plt.legend()
     plt.xlabel('Time (h)')
@@ -96,3 +106,5 @@ for conc, scaling in concentrations_to_plot.items():
     plt.savefig(folder_for_output + 'figure_3_{}.png'.format(conc))
     plt.close()
 
+source_data = pd.concat(source_data, axis=1)
+source_data.to_csv(folder_for_output + 'source_data.csv')

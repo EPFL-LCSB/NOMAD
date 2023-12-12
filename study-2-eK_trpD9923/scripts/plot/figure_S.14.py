@@ -95,6 +95,7 @@ axis_labels = {'glc_D_e': 'Glucose (g/L)',
                'biomass_strain_1': 'Biomass (g/L)',
                }
 time = list(dfs_wt_median.index)
+source_data = []
 for conc, scaling in concentrations_to_plot.items():
 
     # Plot wildtype
@@ -112,6 +113,15 @@ for conc, scaling in concentrations_to_plot.items():
     # Plot new top 5 designs
     plt.plot(time, dfs_new_median[conc] * scaling, color='blue', label='top-5-new', linestyle='--')
 
+    df_temp = pd.concat([dfs_wt_median[conc] * scaling, dfs_ddpa_tkt_median[conc] * scaling,
+                         dfs_old_median[conc] * scaling, dfs_old_lower[conc] * scaling, dfs_old_upper[conc] * scaling,
+                         dfs_new_median[conc] * scaling,
+                         ],
+                        axis=1
+                        )
+    df_temp.columns = [conc + '_' + i for i in ['wt_median', 'ddpa_tkt_median', 'old_designs_median', 'old_designs_lower',
+                                                'old_designs_upper', 'new_designs_median']]
+    source_data.append(df_temp)
     plt.legend(ncol=1)
     plt.xlabel('Time (h)')
     plt.xlim([0, 65])
@@ -119,3 +129,5 @@ for conc, scaling in concentrations_to_plot.items():
     plt.savefig(folder_for_output + 'figure_S.14_{}.png'.format(conc))
     plt.close()
 
+source_data = pd.concat(source_data, axis=1)
+source_data.to_csv(folder_for_output + 'source_data.csv')

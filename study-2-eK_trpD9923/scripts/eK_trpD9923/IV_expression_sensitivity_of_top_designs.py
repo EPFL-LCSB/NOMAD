@@ -33,7 +33,7 @@ Sensitivty analysis parameters
 - 2 = third enzymes -> the other one
 - 3 = all three enzymes
 '''
-ENZ_TO_PERTURB = 3
+ENZ_TO_PERTURB = 1
 PERCENT_PERTURBATION = 50
 TOTAL_TIME = 60
 N_STEPS = 1000
