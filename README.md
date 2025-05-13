@@ -1,7 +1,7 @@
 # NOMAD
 ## About this repo
 This repository contains all the codes and softwares required to reproduce the work presented in the paper entitled
-"Rational strain design with minimal phenotype perturbation".
+"Rational strain design with minimal phenotype perturbation" (https://www.nature.com/articles/s41467-024-44831-0).
 The work is a property of the Laboratory for Computational Systems Biotechnology at the EPFL in Lausanne.
 The repository is a stand alone that uses a docker based installation to ensure that no other softwares/dependencies need to be installed.
 Note that it relies on dev versions of other softwares developed by the LCSB, namely
