@@ -1,4 +1,4 @@
-# NOMAD application to improve p-coumaric acid production in S. cerevisiae
+# NOMAD application: improve p-coumaric acid production in S. cerevisiae
 ## About this subrepository
 This subrepository contains all the code and data required to reproduce the work presented
 in the paper entitled "Kinetic-model-guided engineering of multiple S. cerevisiae strains 
