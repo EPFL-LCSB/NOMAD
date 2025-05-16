@@ -1,0 +1,224 @@
+reaction_id,reaction_name,bigg_reaction,eccodes,reaction
+r_0186,"aldehyde dehydrogenase (tryptophol, NAD)",ALCD26xi,1.1.1.-,h_c + id3acald_c + nadh_c --> ind3eth_c + nad_c
+r_0688,L-lactaldehyde:NADP+ 1-oxidoreductase,LALDO3,1.1.1.-,h_c + mthgxl_c + nadph_c --> lald__L_c + nadp_c
+r_0163,alcohol dehydrogenase (ethanol to acetaldehyde),ALCD2x,1.1.1.1,etoh_c + nad_c --> acald_c + h_c + nadh_c
+r_0165,mitochondrial alcohol dehydrogenase,ALCD2irm,1.1.1.1,acald_m + h_m + nadh_m --> etoh_m + nad_m
+r_0186,"aldehyde dehydrogenase (tryptophol, NAD)",ALCD26xi,1.1.1.1,h_c + id3acald_c + nadh_c --> ind3eth_c + nad_c
+r_0187,"aldehyde dehydrogenase (tryptophol, NAD)",ALCD26xim,1.1.1.1,h_m + id3acald_m + nadh_m --> ind3eth_m + nad_m
+r_2115,"alcohol dehydrogenase, (acetaldehyde to ethanol)",ALCD2ir,1.1.1.1,acald_c + h_c + nadh_c --> etoh_c + nad_c
+r_0565,IMP dehydrogenase,IMPD,1.1.1.205,h2o_c + imp_c + nad_c --> h_c + nadh_c + xmp_c
+r_0688,L-lactaldehyde:NADP+ 1-oxidoreductase,LALDO3,1.1.1.21,h_c + mthgxl_c + nadph_c --> lald__L_c + nadp_c
+r_0039,3-dehydroquinate dehydratase,DHQTi,1.1.1.25,3dhq_c --> 3dhsk_c + h2o_c
+r_0040,3-dehydroquinate synthase,DHQS,1.1.1.25,2dda7p_c --> 3dhq_c + pi_c
+r_0065,3-phosphoshikimate 1-carboxyvinyltransferase,PSCVT,1.1.1.25,pep_c + skm5p_c --> 3psme_c + pi_c
+r_0996,shikimate dehydrogenase,SHK3Dr,1.1.1.25,3dhsk_c + h_c + nadph_c --> nadp_c + skm_c
+r_0997,shikimate kinase,SHKK,1.1.1.25,atp_c + skm_c --> adp_c + h_c + skm5p_c
+r_0688,L-lactaldehyde:NADP+ 1-oxidoreductase,LALDO3,1.1.1.265,h_c + mthgxl_c + nadph_c --> lald__L_c + nadp_c
+r_0688,L-lactaldehyde:NADP+ 1-oxidoreductase,LALDO3,1.1.1.283,h_c + mthgxl_c + nadph_c --> lald__L_c + nadp_c
+r_0186,"aldehyde dehydrogenase (tryptophol, NAD)",ALCD26xi,1.1.1.284,h_c + id3acald_c + nadh_c --> ind3eth_c + nad_c
+r_0713,malate dehydrogenase,MDHm,1.1.1.37,mal__L_m + nad_m <=> h_m + nadh_m + oaa_m
+r_0714,"malate dehydrogenase, cytoplasmic",MDH,1.1.1.37,mal__L_c + nad_c <=> h_c + nadh_c + oaa_c
+r_0718,malic enzyme (NAD),ME1m,1.1.1.38,mal__L_m + nad_m --> co2_m + nadh_m + pyr_m
+r_0719,malic enzyme (NADP),ME2m,1.1.1.38,mal__L_m + nadp_m --> co2_m + nadph_m + pyr_m
+r_0891,phosphoglycerate dehydrogenase,PGCD,1.1.1.399,3pg_c + nad_c --> 3php_c + h_c + nadh_c
+r_0658,isocitrate dehydrogenase (NAD+),ICDHxm,1.1.1.41,icit_m + nad_m --> akg_m + co2_m + nadh_m
+r_0659,isocitrate dehydrogenase (NADP),ICDHyr,1.1.1.42,icit_c + nadp_c <=> akg_c + co2_c + nadph_c
+r_2131,isocitrate dehydrogenase,ICDHym,1.1.1.42,icit_m + nadp_m --> akg_m + co2_m + nadph_m
+r_0889,phosphogluconate dehydrogenase,GND,1.1.1.44,6pgc_c + nadp_c --> co2_c + nadph_c + ru5p__D_c
+r_0466,glucose 6-phosphate dehydrogenase,G6PDH2r,1.1.1.49,g6p_c + nadp_c --> 6pgl_c + h_c + nadph_c
+r_0891,phosphoglycerate dehydrogenase,PGCD,1.1.1.95,3pg_c + nad_c --> 3php_c + h_c + nadh_c
+r_0004,(S)-lactate:ferricytochrome-c 2-oxidoreductase,L_LACD2cm,1.1.2.3,2.0 ficytc_m + lac__L_c --> 2.0 focytc_m + pyr_c
+r_0001,(R)-lactate:ferricytochrome-c 2-oxidoreductase,D_LACDcm,1.1.2.4,2.0 ficytc_m + lac__D_c --> 2.0 focytc_m + pyr_c
+r_0002,(R)-lactate:ferricytochrome-c 2-oxidoreductase,D_LACDm,1.1.2.4,2.0 ficytc_m + lac__D_m --> 2.0 focytc_m + pyr_m
+r_0001,(R)-lactate:ferricytochrome-c 2-oxidoreductase,D_LACDcm,1.1.99.-,2.0 ficytc_m + lac__D_c --> 2.0 focytc_m + pyr_c
+r_0002,(R)-lactate:ferricytochrome-c 2-oxidoreductase,D_LACDm,1.1.99.-,2.0 ficytc_m + lac__D_m --> 2.0 focytc_m + pyr_m
+r_0486,glyceraldehyde-3-phosphate dehydrogenase,GAPD,1.2.1.12,g3p_c + nad_c + pi_c <=> 13dpg_c + h_c + nadh_c
+r_1023,succinate-semialdehyde dehydrogenase (NADP),SSALy,1.2.1.16,h2o_c + nadp_c + sucsal_c --> 2.0 h_c + nadph_c + succ_c
+r_0173,"aldehyde dehydrogenase (acetaldehyde, NADP)",ALDD2y,1.2.1.4,acald_c + h2o_c + nadp_c --> ac_c + 2.0 h_c + nadph_c
+r_0174,"aldehyde dehydrogenase (acetylaldehyde, NAD)",ALDD2xm,1.2.1.5,acald_m + h2o_m + nad_m --> ac_m + 2.0 h_m + nadh_m
+r_0175,"aldehyde dehydrogenase (acetylaldehyde, NADP)",ALDD2ym,1.2.1.5,acald_m + h2o_m + nadp_m --> ac_m + 2.0 h_m + nadph_m
+r_0961,pyruvate dehydrogenase,PDHm,1.2.4.1,coa_m + nad_m + pyr_m --> accoa_m + co2_m + nadh_m
+r_0505,glycine-cleavage complex (lipoamide),GCC2cm,1.2.4.2,dhlam_m + nad_m --> h_m + lpam_m + nadh_m
+r_0831,oxoglutarate dehydrogenase (dihydrolipoamide S-succinyltransferase),AKGDbm,1.2.4.2,coa_m + sdhlam_m --> dhlam_m + succoa_m
+r_0832,oxoglutarate dehydrogenase (lipoamide),AKGDam,1.2.4.2,akg_m + h_m + lpam_m --> co2_m + sdhlam_m
+r_0939,prephenate dehydrogenase (NADP),PPND2,1.3.1.13,nadp_c + pphn_c --> 34hpp_c + co2_c + nadph_c
+r_1021,succinate dehydrogenase (ubiquinone-6),SUCD2_u6m,1.3.5.1,q6_m + succ_m <=> fum_m + s_1535_m
+r_0472,glutamate synthase (NADH2),GLUSx,1.4.1.14,akg_c + gln__L_c + h_c + nadh_c --> 2.0 glu__L_c + nad_c
+r_0470,glutamate dehydrogenase (NAD),GLUDxi,1.4.1.2,glu__L_c + h2o_c + nad_c --> akg_c + h_c + nadh_c + nh4_c
+r_0471,glutamate dehydrogenase (NADP),GLUDy,1.4.1.4,akg_c + h_c + nadph_c + nh4_c --> glu__L_c + h2o_c + nadp_c
+r_0505,glycine-cleavage complex (lipoamide),GCC2cm,1.4.4.2,dhlam_m + nad_m --> h_m + lpam_m + nadh_m
+r_0441,FMN reductase,FMNRx,1.5.1.39,fmn_c + h_c + nadh_c --> fmnh2_c + nad_c
+r_0770,"NADH dehydrogenase, cytosolic/mitochondrial",NADH2_u6cm,1.6.5.9,h_c + nadh_c + q6_m --> nad_c + s_1535_m
+r_0773,NADH:ubiquinone oxidoreductase,NADH2_u6m,1.6.5.9,h_m + nadh_m + q6_m --> nad_m + s_1535_m
+r_0505,glycine-cleavage complex (lipoamide),GCC2cm,1.8.1.4,dhlam_m + nad_m --> h_m + lpam_m + nadh_m
+r_0831,oxoglutarate dehydrogenase (dihydrolipoamide S-succinyltransferase),AKGDbm,1.8.1.4,coa_m + sdhlam_m --> dhlam_m + succoa_m
+r_0832,oxoglutarate dehydrogenase (lipoamide),AKGDam,1.8.1.4,akg_m + h_m + lpam_m --> co2_m + sdhlam_m
+r_0961,pyruvate dehydrogenase,PDHm,1.8.1.4,coa_m + nad_m + pyr_m --> accoa_m + co2_m + nadh_m
+r_0505,glycine-cleavage complex (lipoamide),GCC2cm,2.1.2.10,dhlam_m + nad_m --> h_m + lpam_m + nadh_m
+r_0214,aspartate carbamoyltransferase,ASPCT,2.1.3.2,asp__L_c + cbp_c --> cbasp_c + h_c + pi_c
+r_0250,carbamoyl-phosphate synthase (glutamine-hydrolysing),CBPS,2.1.3.2,2.0 atp_c + gln__L_c + h2o_c + hco3_c --> 2.0 adp_c + cbp_c + glu__L_c + 2.0 h_c + pi_c
+r_1049,transketolase 1,TKT1,2.2.1.1,r5p_c + xu5p__D_c <=> g3p_c + s7p_c
+r_1050,transketolase 2,TKT2,2.2.1.1,e4p_c + xu5p__D_c <=> f6p_c + g3p_c
+r_1048,transaldolase,TALA,2.2.1.2,g3p_c + s7p_c --> e4p_c + f6p_c
+r_0961,pyruvate dehydrogenase,PDHm,2.3.1.12,coa_m + nad_m + pyr_m --> accoa_m + co2_m + nadh_m
+r_0505,glycine-cleavage complex (lipoamide),GCC2cm,2.3.1.61,dhlam_m + nad_m --> h_m + lpam_m + nadh_m
+r_0831,oxoglutarate dehydrogenase (dihydrolipoamide S-succinyltransferase),AKGDbm,2.3.1.61,coa_m + sdhlam_m --> dhlam_m + succoa_m
+r_0832,oxoglutarate dehydrogenase (lipoamide),AKGDam,2.3.1.61,akg_m + h_m + lpam_m --> co2_m + sdhlam_m
+r_0103,acetyl-CoA C-acetyltransferase,ACACT1r,2.3.1.9,2.0 accoa_c <=> aacoa_c + coa_c
+r_0300,citrate synthase,CSm,2.3.3.1,accoa_m + h2o_m + oaa_m --> cit_m + coa_m + h_m
+r_0024,2-isopropylmalate synthase,IPPS,2.3.3.13,3mob_c + accoa_c + h2o_c --> 3c3hmp_c + coa_c + h_c
+r_0025,2-isopropylmalate synthase,IPPSm,2.3.3.13,3mob_m + accoa_m + h2o_m --> 3c3hmp_m + coa_m + h_m
+r_0716,malate synthase,MALS,2.3.3.9,accoa_c + glx_c + h2o_c --> coa_c + h_c + mal__L_c
+r_0563,Imidazole-glycerol-3-phosphate synthase,IG3PS,2.4.2.-,gln__L_c + prlp_c --> aicar_c + eig3p_c + glu__L_c + h_c
+r_0949,guanosine phosphorylase,PUNP3,2.4.2.1,gsn_c + pi_c <=> gua_c + r1p_c
+r_0915,phosphoribosylpyrophosphate amidotransferase,GLUPRT,2.4.2.14,gln__L_c + h2o_c + prpp_c --> glu__L_c + h_c + ppi_c + pram_c
+r_0202,anthranilate phosphoribosyltransferase,ANPRT,2.4.2.18,anth_c + prpp_c --> h_c + ppi_c + pran_c
+r_0527,guanine phosphoribosyltransferase,GUAPRT,2.4.2.8,gua_c + prpp_c --> gmp_c + h_c + ppi_c
+r_0531,Heme O synthase,HEMEOSm,2.5.1.-,frdp_m + h2o_m + pheme_m --> hemeO_m + ppi_m
+r_0039,3-dehydroquinate dehydratase,DHQTi,2.5.1.19,3dhq_c --> 3dhsk_c + h2o_c
+r_0040,3-dehydroquinate synthase,DHQS,2.5.1.19,2dda7p_c --> 3dhq_c + pi_c
+r_0065,3-phosphoshikimate 1-carboxyvinyltransferase,PSCVT,2.5.1.19,pep_c + skm5p_c --> 3psme_c + pi_c
+r_0996,shikimate dehydrogenase,SHK3Dr,2.5.1.19,3dhsk_c + h_c + nadph_c --> nadp_c + skm_c
+r_0997,shikimate kinase,SHKK,2.5.1.19,atp_c + skm_c --> adp_c + h_c + skm5p_c
+r_0020,2-deoxy-D-arabino-heptulosonate 7-phosphate synthetase,DDPAm,2.5.1.54,e4p_m + h2o_m + pep_m --> 2dda7p_m + pi_m
+r_0042,3-deoxy-D-arabino-heptulosonate 7-phosphate synthetase,DDPA,2.5.1.54,e4p_c + h2o_c + pep_c --> 2dda7p_c + pi_c
+r_0216,aspartate transaminase,ASPTA,2.6.1.1,akg_c + asp__L_c --> glu__L_c + oaa_c
+r_0217,aspartate transaminase,ASPTAm,2.6.1.1,glu__L_m + oaa_m --> akg_m + asp__L_m
+r_0118,acteylornithine transaminase,ACOTAim,2.6.1.11,acg5sa_m + glu__L_m --> acorn_m + akg_m
+r_0819,ornithine transaminase,ORNTA,2.6.1.13,akg_c + orn_c --> glu5sa_c + glu__L_c
+r_0477,glutamine-fructose-6-phosphate transaminase,GF6PTA,2.6.1.16,f6p_c + gln__L_c --> gam6p_c + glu__L_c
+r_0068,4-aminobutyrate transaminase,ABTA,2.6.1.19,4abut_c + akg_c --> glu__L_c + sucsal_c
+r_0674,L-alanine transaminase,ALATA_Lm,2.6.1.2,akg_m + ala__L_m <=> glu__L_m + pyr_m
+r_4226,L-Alanine:2-oxoglutarate aminotransferase,ALATA_L,2.6.1.2,akg_c + ala__L_c <-- glu__L_c + pyr_c
+r_0018,2-aminoadipate transaminase,AATA,2.6.1.39,2oxoadp_c + glu__L_c <=> L2aadp_c + akg_c
+r_0851,phenylalanine transaminase,PHETA1,2.6.1.39,akg_c + phe__L_c <-- glu__L_c + phpyr_c
+r_1056,tryptophan transaminase,TRPTA,2.6.1.39,akg_c + trp__L_c --> glu__L_c + indpyr_c
+r_1063,tyrosine transaminase,TYRTA,2.6.1.39,34hpp_c + glu__L_c --> akg_c + tyr__L_c
+r_0663,isoleucine transaminase,ILETA,2.6.1.42,akg_c + ile__L_c <-- 3mop_c + glu__L_c
+r_0664,isoleucine transaminase,ILETAm,2.6.1.42,akg_m + ile__L_m <=> 3mop_m + glu__L_m
+r_0699,leucine transaminase,LEUTA,2.6.1.42,akg_c + leu__L_c <=> 4mop_c + glu__L_c
+r_1087,valine transaminase,VALTA,2.6.1.42,akg_c + val__L_c <=> 3mob_c + glu__L_c
+r_1088,"valine transaminase, mitochondiral",VALTAim,2.6.1.42,akg_m + val__L_m <=> 3mob_m + glu__L_m
+r_0156,alanine glyoxylate aminotransferase,AGTi,2.6.1.44,ala__L_c + glx_c --> gly_c + pyr_c
+r_0918,phosphoserine transaminase,PSERT,2.6.1.52,3php_c + glu__L_c --> akg_c + pser__L_c
+r_0018,2-aminoadipate transaminase,AATA,2.6.1.57,2oxoadp_c + glu__L_c <=> L2aadp_c + akg_c
+r_0851,phenylalanine transaminase,PHETA1,2.6.1.57,akg_c + phe__L_c <-- glu__L_c + phpyr_c
+r_1056,tryptophan transaminase,TRPTA,2.6.1.57,akg_c + trp__L_c --> glu__L_c + indpyr_c
+r_1063,tyrosine transaminase,TYRTA,2.6.1.57,34hpp_c + glu__L_c --> akg_c + tyr__L_c
+r_2118,tryptophan transaminase,araphe3,2.6.1.57,phpyr_c + trp__L_c --> indpyr_c + phe__L_c
+r_0018,2-aminoadipate transaminase,AATA,2.6.1.7,2oxoadp_c + glu__L_c <=> L2aadp_c + akg_c
+r_2118,tryptophan transaminase,araphe3,2.6.1.7,phpyr_c + trp__L_c --> indpyr_c + phe__L_c
+r_0066,4-amino-4-deoxychorismate synthase,ADCS,2.6.1.85,chor_c + gln__L_c --> 4adcho_c + glu__L_c
+r_0538,histidinol-phosphate transaminase,HSTPT,2.6.1.9,glu__L_c + imacp_c --> akg_c + hisp_c
+r_0534,hexokinase (D-glucose:ATP),HEX1,2.7.1.1,atp_c + glc__D_c --> adp_c + g6p_c + h_c
+r_0886,phosphofructokinase,PFK,2.7.1.11,atp_c + f6p_c --> adp_c + fdp_c + h_c
+r_0887,phosphofructokinase (s7p),PFK_3,2.7.1.11,atp_c + s7p_c --> adp_c + h_c + s17bp_c
+r_4232,ATP:D-Gluconate 6-phosphotransferase,GNK,2.7.1.12,atp_c + glcn_c --> 6pgc_c + adp_c + h_c
+r_0969,ribokinase,RBK,2.7.1.15,atp_c + rib__D_c --> adp_c + h_c + r5p_c
+r_0534,hexokinase (D-glucose:ATP),HEX1,2.7.1.2,atp_c + glc__D_c --> adp_c + g6p_c + h_c
+r_0765,NAD kinase,NADK,2.7.1.23,atp_c + nad_c --> adp_c + h_c + nadp_c
+r_0962,pyruvate kinase,PYK,2.7.1.40,adp_c + h_c + pep_c --> atp_c + pyr_c
+r_0039,3-dehydroquinate dehydratase,DHQTi,2.7.1.71,3dhq_c --> 3dhsk_c + h2o_c
+r_0040,3-dehydroquinate synthase,DHQS,2.7.1.71,2dda7p_c --> 3dhq_c + pi_c
+r_0065,3-phosphoshikimate 1-carboxyvinyltransferase,PSCVT,2.7.1.71,pep_c + skm5p_c --> 3psme_c + pi_c
+r_0996,shikimate dehydrogenase,SHK3Dr,2.7.1.71,3dhsk_c + h_c + nadph_c --> nadp_c + skm_c
+r_0997,shikimate kinase,SHKK,2.7.1.71,atp_c + skm_c --> adp_c + h_c + skm5p_c
+r_0765,NAD kinase,NADK,2.7.1.86,atp_c + nad_c --> adp_c + h_c + nadp_c
+r_0892,phosphoglycerate kinase,PGK,2.7.2.3,13dpg_c + adp_c <=> 3pg_c + atp_c
+r_0149,adenylate kinase,ADK1m,2.7.4.10,amp_m + atp_m + h_m --> 2.0 adp_m
+r_0148,adenylate kinase,ADK1,2.7.4.3,amp_c + atp_c + h_c --> 2.0 adp_c
+r_0800,nucleoside diphosphate kinase,NDPK1,2.7.4.6,atp_c + gdp_c --> adp_c + gtp_c
+r_0528,guanylate kinase,GK1,2.7.4.8,atp_c + gmp_c + h_c --> adp_c + gdp_c
+r_0916,phosphoribosylpyrophosphate synthetase,PRPPS,2.7.6.1,atp_c + r5p_c --> amp_c + h_c + prpp_c
+r_0091,6-phosphogluconolactonase,PGL,3.1.1.31,6pgl_c + h2o_c --> 6pgc_c + h_c
+r_0111,acetyl-CoA hydrolase,ACOAHim,3.1.2.1,accoa_m + h2o_m --> ac_m + coa_m + h_m
+r_0553,hydroxyacylglutathione hydrolase,GLYOX,3.1.2.6,h2o_c + lgt__S_c --> gthrd_c + h_c + lac__D_c
+r_0449,fructose-bisphosphatase,FBP,3.1.3.11,fdp_c + h2o_c --> f6p_c + pi_c
+r_0537,histidinol-phosphatase,HISTP,3.1.3.15,h2o_c + h_c + hisp_c --> histd_c + pi_c
+r_0917,phosphoserine phosphatase (L-serine),PSP_L,3.1.3.3,h2o_c + pser__L_c --> pi_c + ser__L_c
+r_4045,uridine hydrolase,URIH,3.2.2.3,h2o_c + uri_c --> rib__D_c + ura_c
+r_0679,L-asparaginase,ASNN,3.5.1.1,asn__L_c + h2o_c --> asp__L_c + nh4_c
+r_0143,adenosine monophosphate deaminase,AMPDA,3.5.4.6,amp_c + h2o_c + h_c --> imp_c + nh4_c
+r_0568,inorganic diphosphatase,PPA,3.6.1.1,h2o_c + ppi_c --> h_c + 2.0 pi_c
+r_0569,inorganic diphosphatase,PPAm,3.6.1.1,h2o_m + ppi_m --> h_m + 2.0 pi_m
+r_0227,"ATPase, cytosolic",ATPS,3.6.1.5,atp_c + h2o_c --> adp_c + h_e + pi_c
+r_0788,nucleoside diphosphatase,NDP1,3.6.1.5,adp_c + h2o_c --> amp_c + 2.0 h_c + pi_c
+r_0789,nucleoside diphosphatase,NDP3,3.6.1.5,gdp_c + h2o_c --> gmp_c + 2.0 h_c + pi_c
+r_0804,nucleoside triphosphatase,NTP3,3.6.1.5,gtp_c + h2o_c --> gdp_c + h_c + pi_c
+r_0226,ATP synthase,ATPS3m,3.6.3.14,adp_m + 3.0 h_i + pi_m --> atp_m + h2o_m + 2.0 h_m
+r_0227,"ATPase, cytosolic",ATPS,3.6.3.6,atp_c + h2o_c --> adp_c + h_e + pi_c
+r_0567,indole-3-pyruvate decarboxylase,INDPYRD,4.1.1.-,h_c + indpyr_c --> co2_c + id3acald_c
+r_0959,pyruvate decarboxylase,PYRDC,4.1.1.-,h_c + pyr_c --> acald_c + co2_c
+r_0567,indole-3-pyruvate decarboxylase,INDPYRD,4.1.1.1,h_c + indpyr_c --> co2_c + id3acald_c
+r_0959,pyruvate decarboxylase,PYRDC,4.1.1.1,h_c + pyr_c --> acald_c + co2_c
+r_0469,glutamate decarboxylase,GLUDC,4.1.1.15,glu__L_c + h_c --> 4abut_c + co2_c
+r_4185,oxaloacetate carboxy-lyase (pyruvate-forming),OAADC,4.1.1.3,h_c + oaa_c --> co2_c + pyr_c
+r_0567,indole-3-pyruvate decarboxylase,INDPYRD,4.1.1.43,h_c + indpyr_c --> co2_c + id3acald_c
+r_0959,pyruvate decarboxylase,PYRDC,4.1.1.43,h_c + pyr_c --> acald_c + co2_c
+r_0566,indole-3-glycerol-phosphate synthase,IGPS,4.1.1.48,2cpr5p_c + h_c --> 3ig3p_c + co2_c + h2o_c
+r_0884,phosphoenolpyruvate carboxykinase,PPCK,4.1.1.49,atp_c + oaa_c --> adp_c + co2_c + pep_c
+r_0567,indole-3-pyruvate decarboxylase,INDPYRD,4.1.1.74,h_c + indpyr_c --> co2_c + id3acald_c
+r_0959,pyruvate decarboxylase,PYRDC,4.1.1.74,h_c + pyr_c --> acald_c + co2_c
+r_0450,fructose-bisphosphate aldolase,FBA,4.1.2.13,fdp_c <=> dhap_c + g3p_c
+r_0990,"sedoheptulose 1,7-bisphosphate D-glyceraldehyde-3-phosphate-lyase",FBA3,4.1.2.13,s17bp_c --> dhap_c + e4p_c
+r_0563,Imidazole-glycerol-3-phosphate synthase,IG3PS,4.1.3.-,gln__L_c + prlp_c --> aicar_c + eig3p_c + glu__L_c + h_c
+r_0662,isocitrate lyase,ICL,4.1.3.1,icit_c --> glx_c + succ_c
+r_4185,oxaloacetate carboxy-lyase (pyruvate-forming),OAADC,4.1.3.17,h_c + oaa_c --> co2_c + pyr_c
+r_0203,anthranilate synthase,ANS,4.1.3.27,chor_c + gln__L_c --> anth_c + glu__L_c + h_c + pyr_c
+r_0566,indole-3-glycerol-phosphate synthase,IGPS,4.1.3.27,2cpr5p_c + h_c --> 3ig3p_c + co2_c + h2o_c
+r_0662,isocitrate lyase,ICL,4.1.3.30,icit_c --> glx_c + succ_c
+r_4262,citrate hydroxymutase,ACONTm,4.2.1.-,cit_m --> icit_m
+r_0039,3-dehydroquinate dehydratase,DHQTi,4.2.1.10,3dhq_c --> 3dhsk_c + h2o_c
+r_0040,3-dehydroquinate synthase,DHQS,4.2.1.10,2dda7p_c --> 3dhq_c + pi_c
+r_0065,3-phosphoshikimate 1-carboxyvinyltransferase,PSCVT,4.2.1.10,pep_c + skm5p_c --> 3psme_c + pi_c
+r_0996,shikimate dehydrogenase,SHK3Dr,4.2.1.10,3dhsk_c + h_c + nadph_c --> nadp_c + skm_c
+r_0997,shikimate kinase,SHKK,4.2.1.10,atp_c + skm_c --> adp_c + h_c + skm5p_c
+r_0366,enolase,ENO,4.2.1.11,2pg_c <=> h2o_c + pep_c
+r_4236,(R)-lactate hydro-lyase,GLYOX3,4.2.1.130,h_c + lac__D_c <=> h2o_c + mthgxl_c
+r_0564,imidazoleglycerol-phosphate dehydratase,IGPDH,4.2.1.19,eig3p_c --> h2o_c + imacp_c
+r_0451,fumarase,FUMm,4.2.1.2,fum_m + h2o_m <=> mal__L_m
+r_0452,"fumarase, cytoplasmic",FUM,4.2.1.2,fum_c + h2o_c <=> mal__L_c
+r_1055,tryptophan synthase (indoleglycerol phosphate),TRPS1,4.2.1.20,3ig3p_c + ser__L_c --> g3p_c + h2o_c + trp__L_c
+r_0280,cis-aconitate(3-) to isocitrate,ACN_b_m,4.2.1.3,acon_C_m + h2o_m --> icit_m
+r_0302,citrate to cis-aconitate(3-),ACN_a_m,4.2.1.3,cit_m --> acon_C_m + h2o_m
+r_0303,"citrate to cis-aconitate(3-), cytoplasmic",ACONTa,4.2.1.3,cit_c --> acon_C_c + h2o_c
+r_2305,cis-aconitate(3-) to isocitrate,ACONTb,4.2.1.3,acon_C_c + h2o_c --> icit_c
+r_0938,prephenate dehydratase,PPNDH,4.2.1.51,h_c + pphn_c --> co2_c + h2o_c + phpyr_c
+r_0039,3-dehydroquinate dehydratase,DHQTi,4.2.3.4,3dhq_c --> 3dhsk_c + h2o_c
+r_0040,3-dehydroquinate synthase,DHQS,4.2.3.4,2dda7p_c --> 3dhq_c + pi_c
+r_0065,3-phosphoshikimate 1-carboxyvinyltransferase,PSCVT,4.2.3.4,pep_c + skm5p_c --> 3psme_c + pi_c
+r_0996,shikimate dehydrogenase,SHK3Dr,4.2.3.4,3dhsk_c + h_c + nadph_c --> nadp_c + skm_c
+r_0997,shikimate kinase,SHKK,4.2.3.4,atp_c + skm_c --> adp_c + h_c + skm5p_c
+r_0279,chorismate synthase,CHORS,4.2.3.5,3psme_c --> chor_c + pi_c
+r_0689,L-serine deaminase,SERD_L,4.3.1.17,ser__L_c --> nh4_c + pyr_c
+r_0689,L-serine deaminase,SERD_L,4.3.1.19,ser__L_c --> nh4_c + pyr_c
+r_0151,adenylosuccinate lyase (AICAR),ADSL2r,4.3.2.2,25aics_c + h_c --> aicar_c + fum_c
+r_0152,adenylosuccinate lyase,ADSL1r,4.3.2.2,dcamp_c <=> amp_c + fum_c
+r_0697,lactoylglutathione lyase,LGTHL,4.4.1.5,gthrd_c + mthgxl_c --> lgt__S_c
+r_0984,ribulose 5-phosphate 3-epimerase,RPE,5.1.3.1,ru5p__D_c --> xu5p__D_c
+r_1054,triose-phosphate isomerase,TPI,5.3.1.1,dhap_c <=> g3p_c
+r_0913,phosphoribosylanthranilate isomerase,PRAIi,5.3.1.24,pran_c --> 2cpr5p_c
+r_0982,ribose-5-phosphate isomerase,RPI,5.3.1.6,ru5p__D_c <=> r5p_c
+r_0467,glucose-6-phosphate isomerase,PGI,5.3.1.9,g6p_c <=> f6p_c
+r_0893,phosphoglycerate mutase,PGM,5.4.2.11,3pg_c <=> 2pg_c
+r_0888,phosphoglucomutase,PGMT,5.4.2.2,g6p_c <=> g1p_c
+r_0907,phosphopentomutase,PPM,5.4.2.2,r1p_c --> r5p_c
+r_0907,phosphopentomutase,PPM,5.4.2.7,r1p_c --> r5p_c
+r_0278,chorismate mutase,CHORM,5.4.99.5,chor_c --> pphn_c
+r_0112,acetyl-CoA synthetase,ACS,6.2.1.1,ac_c + atp_c + coa_c --> accoa_c + amp_c + h_c + ppi_c
+r_0113,acetyl-CoA synthetase,ACSm,6.2.1.1,ac_m + atp_m + coa_m --> accoa_m + amp_m + h_m + ppi_m
+r_1022,succinate-CoA ligase (ADP-forming),SUCOASm,6.2.1.5,adp_m + pi_m + succoa_m --> atp_m + coa_m + succ_m
+r_0476,glutamine synthetase,GLNS,6.3.1.2,atp_c + glu__L_c + nh4_c --> adp_c + gln__L_c + h_c + pi_c
+r_0346,dihydrofolate synthase,DHFS,6.3.2.12,atp_c + dhpt_c + glu__L_c --> adp_c + dhf_c + h_c + pi_c
+r_0908,phosphoribosyl amino imidazolesuccinocarbozamide synthetase,PRASCSi,6.3.2.6,5aizc_c + asp__L_c + atp_c --> 25aics_c + adp_c + 2.0 h_c + pi_c
+r_0109,"acetyl-CoA carboxylase, reaction",ACCOAC,6.3.4.14,accoa_c + atp_c + hco3_c --> adp_c + h_c + malcoa_c + pi_c
+r_0306,CTP synthase (glutamine),CTPS2,6.3.4.2,atp_c + gln__L_c + h2o_c + utp_c --> adp_c + ctp_c + glu__L_c + 2.0 h_c + pi_c
+r_0307,CTP synthase (NH3),CTPS1,6.3.4.2,atp_c + nh4_c + utp_c --> adp_c + ctp_c + 2.0 h_c + pi_c
+r_0153,adenylosuccinate synthase,ADSS,6.3.4.4,asp__L_c + gtp_c + imp_c --> dcamp_c + gdp_c + 2.0 h_c + pi_c
+r_0768,NAD synthase,NADS2,6.3.5.1,atp_c + dnad_c + gln__L_c + h2o_c --> amp_c + glu__L_c + 2.0 h_c + nad_c + ppi_c
+r_0514,GMP synthase,GMPS2,6.3.5.2,atp_c + gln__L_c + h2o_c + xmp_c --> amp_c + glu__L_c + gmp_c + 4.0 h_c + ppi_c
+r_0079,5'-phosphoribosylformyl glycinamidine synthetase,PRFGS,6.3.5.3,atp_c + fgam_c + gln__L_c + h2o_c --> adp_c + fpram_c + glu__L_c + h_c + pi_c
+r_0211,asparagine synthase (glutamine-hydrolysing),ASNS1,6.3.5.4,asp__L_c + atp_c + gln__L_c + h2o_c --> amp_c + asn__L_c + glu__L_c + 2.0 h_c + ppi_c
+r_0214,aspartate carbamoyltransferase,ASPCT,6.3.5.5,asp__L_c + cbp_c --> cbasp_c + h_c + pi_c
+r_0250,carbamoyl-phosphate synthase (glutamine-hydrolysing),CBPS,6.3.5.5,2.0 atp_c + gln__L_c + h2o_c + hco3_c --> 2.0 adp_c + cbp_c + glu__L_c + 2.0 h_c + pi_c
+r_0958,pyruvate carboxylase,PC,6.4.1.1,atp_c + hco3_c + pyr_c --> adp_c + h_c + oaa_c + pi_c

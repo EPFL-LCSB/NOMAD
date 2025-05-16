@@ -1,0 +1,32 @@
+models:
+  strain_1: '../../models/kinetic_model_scaffold.yaml'
+
+biomass:
+  strain_1: "LMPD_s_0450_c_1_256"
+
+biomass_scaling:
+  strain_1: 1e6  # i.e. DM_biomass_c/LMPD_biomass_c_1_420
+
+extracellular_compartment: e
+
+initial_medium:
+  glc__D_e : 0.11 # 10 g/L - added a bit more for the initial settling period
+
+reactor_volume: 25e11 # Units of cell volume! here v_cell in units of 1 mum^3 = 1e-15 L % we want 50 mL = 0.05L
+
+scaling:
+  concentration: 1e9 # for the shikki varma
+  density: 1200
+  gDW_gWW: 0.3
+  time: 1.0
+
+boundary_conditions: # what all should I add here/ in reality if you have acetate secretion - you have a decrease in pH
+  CC_co2_e:
+    class: ConstantConcentration
+    reactant: co2_e
+  CC_h_e:
+    class: ConstantConcentration
+    reactant: h_e
+  CC_o2_e:
+    class: ConstantConcentration
+    reactant: o2_e
