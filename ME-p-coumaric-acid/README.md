@@ -13,7 +13,7 @@ It contains
 6. The code used to generate kinetic models around the mean steady-state (kinetic-modelling). Note that this need not be run again and if you do run it, please name the output something else so you do not overwrite the existing parameters.
 7. The codes used to compare our KMs with those in BRENDA (kinetic-modelling)
 
-The set of 5,000 steady state profiles consistent with the strain ST10284  and the output of the ODE simulations can be found in our Zenodo repository (https://doi.org/10.5281/zenodo.15432260). If you want to re-run the data postprocessing /plotting codes, please download them into the relevant folders:
+The set of 5,000 steady state profiles consistent with the strain ST10284 (steady_states.csv)  and the output of the ODE simulations (/nonlinear-simulations) can be found in our Zenodo repository (https://doi.org/10.5281/zenodo.15432260). If you want to re-run the data postprocessing/plotting codes, please download them into the relevant folders:
 - put steady_states.csv in /data (for the 5000 steady states)
 - put /nonlinear-simulations folder in strain-design/output/ (for the results of nonlinear simulations)
 
