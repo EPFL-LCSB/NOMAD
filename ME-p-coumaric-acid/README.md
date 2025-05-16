@@ -1,8 +1,10 @@
 # NOMAD application: improve p-coumaric acid production in S. cerevisiae
 ## About this subrepository
-This subrepository contains all the code and data required to reproduce the work presented
+This subrepository contains the code required to reproduce the work presented
 in the paper entitled "Kinetic-model-guided engineering of multiple S. cerevisiae strains 
 improves p-coumaric acid production" (https://doi.org/10.1101/2024.12.15.628543).
+
+The corresponding data can be found at the Zenodo repository (https://doi.org/10.5281/zenodo.15432261)
 
 The work is a property of the Laboratory for Computational Systems Biotechnology at the EPFL in Lausanne.
 
