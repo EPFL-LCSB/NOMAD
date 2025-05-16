@@ -13,8 +13,10 @@ It contains
 6. The code used to generate kinetic models around the mean steady-state (kinetic-modelling). Note that this need not be run again and if you do run it, please name the output something else so you do not overwrite the existing parameters.
 7. The codes used to compare our KMs with those in BRENDA (kinetic-modelling)
 
-The set of 5,000 steady state profiles consistent with the strain ST10284 (data/steady_states.csv) and the output of the ODE simulations can be found in our Zenodo repository (https://doi.org/10.5281/zenodo.15432260). If you want to re-run the data postprocessing /plotting codes, please download them into the path strain-design/output/nonlinear-verification.
-This will be necessary for running strain-design/scripts/IV_pca_yield_analysis.py and strain-design/scripts/plot/figure_2BC.py
+The set of 5,000 steady state profiles consistent with the strain ST10284 (data/steady_states.csv) and the output of the ODE simulations can be found in our Zenodo repository (https://doi.org/10.5281/zenodo.15432260). If you want to re-run the data postprocessing /plotting codes, please download them into the relevant folders:
+- data/ (for the 5000 steady states)
+- strain-design/output/ (for the results of nonlinear simulations)
+The former will be necessary for running the strain design code (I-III), while the later for running strain-design/scripts/IV_pca_yield_analysis.py and strain-design/scripts/plot/figure_2BC.py
 
 The subrepository uses code from the mother repository - please follow the instructions in the NOMAD README to install NOMAD, pytfa and Skimpy.
 We strongly recommend using the pre-built docker image instead of building your own.
