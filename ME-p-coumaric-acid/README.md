@@ -17,7 +17,7 @@ The set of 5,000 steady state profiles consistent with the strain ST10284 (stead
 - put steady_states.csv in /data (for the 5000 steady states)
 - put /nonlinear-simulations folder in strain-design/output/ (for the results of nonlinear simulations)
 
-The former will be necessary for running the strain design code (I-III), while the later for running strain-design/scripts/IV_pca_yield_analysis.py and strain-design/scripts/plot/figure_2BC.py
+The former will be necessary for running the strain design code (I-III), while the latter for running strain-design/scripts/IV_pca_yield_analysis.py and strain-design/scripts/plot/figure_2BC.py
 
 The subrepository uses code from the mother repository - please follow the instructions in the NOMAD README to install NOMAD, pytfa and Skimpy.
 We strongly recommend using the pre-built docker image instead of building your own.
